@@ -1,1 +1,1 @@
-# process_coupling_in_EAM
+# Process Coupling in the E3SM Atmosphere Model (EAM)
