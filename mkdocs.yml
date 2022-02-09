@@ -1,0 +1,65 @@
+site_name: Process Coupling in EAM
+site_url: https://example.com/
+site_author: Hui Wan
+copyright: Copyright 2022, Hui Wan.
+dev_addr: '127.0.0.1:7000'
+
+nav:
+    - Home: index.md
+    - "Introduction":
+       - "Nomenclature": nomenclature.md
+       - "Code structure": nomenclature.md
+    - 'Atmosphere-surface coupling':  
+       - "Coupler": coupler.md
+       - "Atmosphere-land": coupler.md
+       - "Atmosphere-ocean": coupler.md
+    - 'Physics-dynamics coupling':
+       - 'Dycore overview': homme.md
+       - 'PDC for T, u, v': pdc.md
+       - 'PDC for tracers': pdc.md
+    - 'Coupling at physics driver level':
+       - 'u and v':        momentum.md
+       - "Temperature":    temperature.md 
+       - "Humidity":       humidity.md 
+       - "Cloud liquid":   cloud_liquid.md
+       - "Cloud ice":      cloud_ice.md
+       - "Rain and snow":  precip.md
+       - "Aerosols":       aerosol_overview.md
+    - 'Coupling inside parameterizations':
+       - "Cloud microphysics":   MG2.md
+       - "Aerosol microphysics": aerosol_microphysics.md
+
+theme: 
+  name: material 
+# font:
+#   text: Roboto
+#   code: Roboto Mono
+  palette:
+    primary: blue 
+  features:
+    - navigation.indices
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - toc:
+      permalink: True
+  # from Jeff Johnson's Skywalker docs:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  # for images
+  - attr_list
+  - md_in_html
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
